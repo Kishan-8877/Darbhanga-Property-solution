@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body margin="0"; padding="0";>
+
+
+<!-- Top Bar (Ye scroll hoga) -->
+<div class="top-bar">
+    <div class="contact-info">
+        <span>📧 info@Darbhanga property solution.com</span>
+        <span>📞 +91-7970308680</span>
+    </div>
+    <div class="location">Serving Darbhanga & Nearby Regions</div>
+</div>
+
+<!-- Main Navigation (Ye sticky rahega) -->
+<nav class="main-nav" id="mainNav">
+    <div class="logo"><img src="img/dps.jpg" height="40px" width="40px" alt=""> Darbhanga<span> Property solution</span></div>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="properties.html">Our Properties</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+       
+    </ul>
+    
+    
+</nav>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    
+    /* Top Bar Styling */
+    .top-bar { 
+        background: #333; 
+        color: #fff; 
+        padding: 6px 5%; 
+        display: flex; 
+        justify-content: space-between; 
+        font-size: 12px; 
+    }
+    
+    /* Main Nav Sticky Styling */
+    .main-nav { 
+        background: #1a1a1a; 
+        padding: 12px 5%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        width: 100%; 
+        position: sticky; 
+        top: 0; 
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .logo { color: #fff; font-size: 20px; font-weight: 500; cursor: pointer; }
+    .logo span { color: #ffc107; }
+    
+    .nav-links { display: flex; list-style: none; gap: 25px; }
+    .nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: #ffc107; }
+
+    .login-btn { background: #ffc107; border: none; padding: 8px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    .login-btn:hover { background: #e0a800; }
+    
+    /* Mobile Responsive */
+    .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+    .hamburger span { width: 25px; height: 3px; background: white; }
+    .login-mobile { display: none; margin-top: 15px; }
+
+    @media (max-width: 768px) {
+        .hamburger { display: flex; }
+        .desktop-only { display: none; }
+        .login-mobile { display: block; }
+        
+        .nav-links { 
+            display: none; flex-direction: column; position: absolute; top: 100%; left: 0; 
+            width: 100%; background: #1a1a1a; padding: 20px; text-align: center; 
+            border-top: 1px solid #333;
+        }
+        .nav-links.active { display: flex; }
+    }
+</style>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+    }
+</script>
+
+
+<!-- hero ind  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Real Estate Hero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Find Your Dream Property</h1>
+                <p>Explore the finest homes, apartments, and commercial spaces tailored to your lifestyle and investment needs.</p>
+                <button class="cta-button">Explore Properties</button>
+            </div>
+            <div class="hero-image-wrapper">
+                <!-- Replace with your image URL -->
+                <img src="img/indx.jpeg" alt="Luxury Villa">
+            </div>
+        </div>
+    </section>
+
+
+
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section Base Styles */
+.hero {
+    width: 100%;
+    min-height: 100vh; /* Full screen height */
+    background-color: #fdfaf6; /* Light cream background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Text Content */
+.hero-text {
+    flex: 1; /* Takes available space */
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    padding: 18px 35px;
+    background-color: #007bff; /* Professional Blue */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Fully rounded button */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Image Wrapper with Shape (Desktop Only) */
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    /* Yeh hai wo shape jo desktop par aayegi (Blob shape) */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: all 0.5s ease;
+    /* Thoda zoom effect image par */
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+.hero-image-wrapper img:hover {
+    /* Image shape change on hover for fun */
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; 
+}
+
+/* =========================================
+   Responsive Design (Mobile & Tablets)
+========================================= */
+
+/* For tablets and smaller laptops (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* For Mobile Devices (768px and below) */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 80px 20px; /* More padding on top/bottom */
+    }
+
+    .hero-container {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center align everything */
+        gap: 40px;
+    }
+
+    .hero-text {
+        padding-right: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    .cta-button {
+        width: 100%; /* Full width button on mobile */
+        max-width: 300px;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+    }
+
+    .hero-image-wrapper img {
+        /* Mobile par shape hata kar normal rounded rectangle kar diya */
+        border-radius: 20px; 
+        width: 90%; /* Slightly smaller than full width */
+        max-height: 300px; /* Limit height on mobile */
+    }
+}
+</style>
+
+<!-- abouut abt  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darbhanga property solution - About Us</title>
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        
+        .about-section { padding: 80px 20px; background: #fff; }
+        .container { display: flex; max-width: 1200px; margin: auto; gap: 50px; align-items: center; }
+
+        /* Left Side: Images */
+        .about-image { position: relative; flex: 1; min-height: 450px; }
+        .main-img { width: 85%; border-radius: 20px; overflow: hidden; }
+        .main-img img { width: 100%; display: block; }
+        
+        .experience-badge { position: absolute; top: 30px; left: 0; background: #1a1a1a; color: white; padding: 20px; border-radius: 10px; width: 140px; }
+        
+        .director-img { position: absolute; bottom: 0; right: 0; background: white; padding: 10px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); width: 160px; text-align: center; }
+        .director-img img { width: 100%; border-radius: 10px; }
+
+        /* Right Side: Content */
+        .about-content { flex: 1; }
+        .tag { color: #d4af37; font-weight: bold; margin-bottom: 10px; display: block; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #111; }
+        p { color: #666; line-height: 1.6; margin-bottom: 20px; }
+        
+        .stats { display: flex; gap: 30px; margin-top: 30px; }
+        .stat-item { display: flex; align-items: center; gap: 15px; }
+        .stat-item i { font-size: 24px; color: #007bff; background: #eef5ff; padding: 15px; border-radius: 10px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; text-align: center; }
+            .stats { flex-direction: column; align-items: center; }
+            .about-image { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="about-section">
+    <div class="container">
+        <!-- Left Side Images -->
+        <div class="about-image">
+            <div class="main-img">
+                <img src="img/ct2.jpg" alt="House">
+                <div class="experience-badge">
+                    <h3>10 Years</h3>
+                    <p>Experience</p>
+                </div>
+            </div>
+            <div class="director-img">
+                <img src="img/indx.jpeg" alt="Director">
+                <h4>Kishan Kumar</h4>
+                <p>Director</p>
+            </div>
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="about-content">
+            <span class="tag">About Us – Darbhanga property solution</span>
+            <h1>Welcome to Darbhanga property solution</h1>
+            <p>Welcome to Darbhanga property solution, your trusted partner in real estate across Bihar. We are a leading property portal dedicated to helping homebuyers, investors, and sellers discover the best properties with confidence and clarity.</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-home"></i>
+                    <p><strong>50+ Property Sale</strong><br>Verified & Legal Listings</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p><strong>50+ Property Sale</strong><br>Verified & Legal Listings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- property prpt  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Property Gallery</title>
+    <style>
+        /* ===== General Styles ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f4f4; }
+
+        /* Section Heading */
+        .section-title { text-align: center; font-size: 3rem; color: #1a1a1a; margin: 50px 0 10px 0; }
+        .section-subtitle { text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 40px; }
+
+        /* ===== Grid Container (Desktop: 3 per row) ===== */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 50px 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+            gap: 30px; /* Space between cards */
+        }
+
+        /* ===== Property Card Styles ===== */
+        .property-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* Indicates clickable */
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Ensures images don't stretch */
+        }
+
+        .card-content { padding: 20px; }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #777;
+            line-height: 1.5;
+            /* Truncate text to 3 lines */
+            display: -webkit-box;
+            --webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* ===== Responsive Media Queries (The "Best" Shape) ===== */
+
+        /* Tablets (768px and below): 2 per row */
+        @media (max-width: 768px) {
+            .gallery-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .section-title { font-size: 2.5rem; }
+        }
+
+        /* Phones (480px and below): 1 per row */
+        @media (max-width: 480px) {
+            .gallery-container { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+            .property-card img { height: 250px; /* Bigger images on mobile */ }
+        }
+
+        /* ===== Modal / Popup Styles (Click to View) ===== */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000; /* On top of everything */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8); /* Dark overlay */
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show { display: flex; opacity: 1; }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 20px;
+            position: relative;
+            animation: slideIn 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto; /* Scroll if content is too long */
+        }
+
+        @keyframes slideIn { from { transform: translateY(-50px); } to { transform: translateY(0); } }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .close-modal:hover { color: red; }
+
+        .modal-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .modal-text { padding: 30px; }
+        .modal-text h1 { font-size: 2.5rem; color: #111; margin-bottom: 15px; }
+        .modal-text p { font-size: 1.1rem; color: #444; line-height: 1.8; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Heading Section -->
+    <div class="section-title">Featured Properties</div>
+    <div class="section-subtitle">Explore our best listings designed for modern living.</div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-container">
+
+        <!-- Property Card 1 -->
+        <div class="property-card" onclick="openModal('img/prt.jpeg', 'Luxury Modern Villa', 'Experience unparalleled luxury in this stunning modern villa located in the heart of the city. Featuring 5 bedrooms, a private pool, and smart home technology, this is urban living at its finest.')">
+            <img src="img/prt1.jpeg" alt="Luxury Villa">
+            <div class="card-content">
+                <h3>Luxury Modern Villa</h3>
+                <p>Experience unparalleled luxury in this stunning modern villa located in the heart of the city. Featuring 5 bedrooms, a private pool, and smart home technology, this is urban living at its finest.</p>
+            </div>
+        </div>
+
+
+        <!-- Property Card 2 -->
+        <div class="property-card" onclick="openModal('', 'City Center Penthouse', 'Live above it all in this spectacular city center penthouse. Floor-to-ceiling windows offer breathtaking skyline views. Walking distance to the best restaurants and entertainment.')">
+            <img src="img/prt2.jpeg" alt="Penthouse">
+            <div class="card-content">
+                <h3>City Center Penthouse</h3>
+                <p>Live above it all in this spectacular city center penthouse. Floor-to-ceiling windows offer breathtaking skyline views. Walking distance to the best restaurants and entertainment.</p>
+            </div>
+        </div>
+        
+        <!-- Property Card 3 -->
+        <div class="property-card" onclick="openModal('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80', 'Suburban Family Home', 'Perfect for a growing family, this spacious home is located in a quiet, friendly neighborhood near top-rated schools. Includes a large backyard and updated kitchen.')">
+            <img src="img/prt3.jpeg" alt="Family Home">
+            <div class="card-content">
+                <h3>Suburban Family Home</h3>
+                <p>Perfect for a growing family, this spacious home is located in a quiet, friendly neighborhood near top-rated schools. Includes a large backyard and updated kitchen.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- ===== Modal Popup HTML ===== -->
+    <div id="propertyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-img" src="" alt="Property Image">
+            <div class="modal-text">
+                <h1 id="modalTitle"></h1>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        const modal = document.getElementById("propertyModal");
+        const modalImg = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDesc = document.getElementById("modalDescription");
+
+        function openModal(imgSrc, title, description) {
+            modal.classList.add("show");
+            modalImg.src = imgSrc;
+            modalTitle.innerText = title;
+            modalDesc.innerText = description;
+            // Prevent scrolling body when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove("show");
+            // Restore scrolling
+            document.body.style.overflow = '';
+        }
+
+        // Close modal if clicking outside the content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal on pressing ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && modal.classList.contains('show')) {
+                closeModal();
+            }
+        });
+    </script>
+
+
+
+
+
+
+<!-- support spt  -->
+
+<section class="features-section">
+    <div class="features-container">
+        <!-- Feature 1: Trusted -->
+        <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Trusted Partner</h3>
+            <p>10+ years of trust and reliability in the Bihar real estate market.</p>
+        </div>
+        <!-- Feature 2: Customer Care -->
+        <div class="feature-card">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Our dedicated team is always here to assist you with your queries.</p>
+        </div>
+        <!-- Feature 3: Top Investment -->
+        <div class="feature-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Top Investment</h3>
+            <p>We bring you the most profitable and high-value property options.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Container Layout */
+.features-section { padding: 80px 20px; background-color: #f9f9f9; }
+
+.features-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards on desktop */
+    gap: 30px;
+}
+
+/* Card Styling */
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.feature-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* Icon Styling */
+.feature-card i {
+    font-size: 40px;
+    color: #007bff;
+    background: #eef5ff;
+    padding: 25px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 { margin-bottom: 15px; color: #1a1a1a; }
+.feature-card p { color: #666; line-height: 1.6; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .features-container { grid-template-columns: repeat(2, 1fr); } /* 2 cards on tablets */
+}
+
+@media (max-width: 600px) {
+    .features-container { grid-template-columns: 1fr; } /* 1 card on mobiles */
+}
+</style>
+
+<!-- support faq  -->
+
+<section class="faq-section">
+    <div class="faq-container">
+        <!-- Left Side: Accordion -->
+        <div class="faq-content">
+            <div class="faq-badge">FAQ</div>
+            <h1>If you want to know Frequently Ask Questions</h1>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleFaq(this)">
+                    How can I contact Darbhanga property solution? <span>&#9662;</span>
+                </div>
+                <div class="answer">
+                    <p>You can reach us via phone, email, or by visiting our office. Our team is always ready to assist you with your real estate needs.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleFaq(this)">
+                    Are there any hidden charges involved? <span>&#9662;</span>
+                </div>
+                <div class="answer">
+                    <p>We maintain full transparency with our clients; there are absolutely no hidden charges in our processes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Image with Overlay -->
+        <div class="faq-image-wrapper">
+            <img src="img/indx.jpeg" alt="Support Agent" class="main-img">
+            <div class="support-overlay">
+                <i class="fas fa-headset"></i>
+                <div class="support-text">
+                    <h3>24/7 Support</h3>
+                    <p>Feel free to contact us! 📞🏠</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* =======================================
+   Darbhanga property solution - FAQ Section CSS
+   ======================================= */
+
+/* Container Setup */
+.faq-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 50px; 
+    max-width: 1200px; 
+    margin: 60px auto; 
+    padding: 0 20px; 
+}
+
+/* FAQ Accordion Styling */
+.faq-content { flex: 1; }
+
+.faq-badge { 
+    background: #fff3cd; 
+    color: #856404; 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    display: inline-block; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+}
+
+.faq-item { 
+    margin-bottom: 20px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    background: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+.question { 
+    padding: 20px 25px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background: #fff;
+}
+
+.answer { 
+    padding: 0 25px; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.4s ease, padding 0.4s ease; 
+    color: #555; 
+    line-height: 1.7; 
+}
+
+/* Image & Overlay Styling */
+.faq-image-wrapper { 
+    position: relative; 
+    flex: 1; 
+    max-width: 600px; 
+}
+
+.main-img { 
+    width: 100%; 
+    height: 500px; 
+    object-fit: cover; 
+    display: block; 
+    border-radius: 50px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.support-overlay { 
+    position: absolute; 
+    bottom: 30px; 
+    left: 30px; 
+    right: 30px; 
+    background: #3e4a3b; 
+    color: white; 
+    padding: 20px 30px; 
+    border-radius: 25px; 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.support-overlay i { font-size: 30px; color: #fff; }
+.support-text h3 { margin: 0; font-size: 1.2rem; }
+.support-text p { margin: 0; font-size: 0.9rem; opacity: 0.9; }
+
+/* =======================================
+   Responsive Design
+   ======================================= */
+@media (max-width: 992px) {
+    .faq-container { gap: 30px; }
+    .main-img { height: 400px; }
+}
+
+@media (max-width: 768px) {
+    .faq-container { flex-direction: column; text-align: center; }
+    .faq-image-wrapper { order: -1; width: 100%; }
+    .support-overlay { padding: 15px 20px; }
+}
+</style>
+
+<script>
+    function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
+}
+</script>
+
+
+
+ <!-- header footer 4th  -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-col">
+          <h3>Darbhanga<span> Property solution</span></h3>
+          <p>
+            Darbhanga ka sabse trusted property platform. Hum aapko dilate hain
+            best deals aur verified plots, taaki aapka investment rahe safe aur
+            secure.
+          </p>
+        </div>
+
+        <!-- Important Links -->
+        <div class="footer-col">
+          <h4>Important Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Darbhanga, Darbhanga, India
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i> info@Darbhangapropertysolution.com
+          </p>
+          <p><i class="fas fa-phone"></i> +91-7970308680</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/darbhanga_.property_solution?igsh=eWJnMmp4d3h2b24="
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/share/19F8WJefzi/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aamir. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- FontAwesome CDN for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* Footer Styling */
+      .footer {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 60px 5% 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .footer-col h3 span {
+        color: #ffc107;
+      }
+      .footer-col h4 {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ffc107;
+        display: inline-block;
+      }
+      .footer-col p {
+        color: #ccc;
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col ul li {
+        margin-bottom: 10px;
+      }
+      .footer-col ul li a {
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-col ul li a:hover {
+        color: #ffc107;
+        padding-left: 5px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        background: #333;
+        color: white;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: 0.3s;
+      }
+      .social-links a:hover {
+        background: #ffc107;
+        color: #1a1a1a;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #333;
+        font-size: 14px;
+        color: #777;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .footer {
+          padding: 40px 5%;
+        }
+        .footer-container {
+          gap: 30px;
+          text-align: center;
+        }
+        .footer-col h4 {
+          display: block;
+        }
+      }
+    </style>
+
+
+    
+
+
+    
+    <!-- // include "header/navbar.html"; -->
+    <!-- // include "hero/ind.html"; -->
+    <!-- // include "about/abt.html"; -->
+    <!-- // include "property/prtp.html"; -->
+    <!-- // include "support/spt.html"; -->
+    <!-- // include "support/faq.html"; -->
+    <!-- include "header/footer.html"; -->
+</body>
+</html>

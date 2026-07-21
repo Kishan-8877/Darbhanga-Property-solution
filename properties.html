@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Top Bar (Ye scroll hoga) -->
+<div class="top-bar">
+    <div class="contact-info">
+        <span>📧 info@Darbhanga property solution.com</span>
+        <span>📞 +91-7970308680</span>
+    </div>
+    <div class="location">Serving Darbhanga & Nearby Regions</div>
+</div>
+
+<!-- Main Navigation (Ye sticky rahega) -->
+<nav class="main-nav" id="mainNav">
+    <div class="logo"><img src="img/dps.jpg" height="40px" width="40px" alt=""> Darbhanga<span> Property solution</span></div>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="properties.html">Our Properties</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+       
+    </ul>
+    
+    
+</nav>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    
+    /* Top Bar Styling */
+    .top-bar { 
+        background: #333; 
+        color: #fff; 
+        padding: 6px 5%; 
+        display: flex; 
+        justify-content: space-between; 
+        font-size: 12px; 
+    }
+    
+    /* Main Nav Sticky Styling */
+    .main-nav { 
+        background: #1a1a1a; 
+        padding: 12px 5%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        width: 100%; 
+        position: sticky; 
+        top: 0; 
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .logo { color: #fff; font-size: 20px; font-weight: 500; cursor: pointer; }
+    .logo span { color: #ffc107; }
+    
+    .nav-links { display: flex; list-style: none; gap: 25px; }
+    .nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: #ffc107; }
+
+    .login-btn { background: #ffc107; border: none; padding: 8px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    .login-btn:hover { background: #e0a800; }
+    
+    /* Mobile Responsive */
+    .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+    .hamburger span { width: 25px; height: 3px; background: white; }
+    .login-mobile { display: none; margin-top: 15px; }
+
+    @media (max-width: 768px) {
+        .hamburger { display: flex; }
+        .desktop-only { display: none; }
+        .login-mobile { display: block; }
+        
+        .nav-links { 
+            display: none; flex-direction: column; position: absolute; top: 100%; left: 0; 
+            width: 100%; background: #1a1a1a; padding: 20px; text-align: center; 
+            border-top: 1px solid #333;
+        }
+        .nav-links.active { display: flex; }
+    }
+</style>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+    }
+</script>
+
+
+
+<!-- hero prt  -->
+
+<section class="hero-section">
+    <!-- Background Image container -->
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+        <h1>Find Your Dream Property in <span>Darbhanga</span></h1>
+        <p>Verified plots, best locations, and transparent deals. Your search ends here.</p>
+        <div class="hero-buttons">
+            <a href="contact.html"><button class="btn-primary">contact Us</button></a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Reset: Gap khatam karne ke liye */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    .hero-section {
+        width: 100%;
+        height: 60vh; /* Full screen height ka 80% */
+        background: url('img/ct.jpg') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        padding: 0 20px;
+    }
+
+    /* Dark Overlay taaki text saaf dikhe */
+    .hero-overlay {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        color: #fff;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .hero-content span {
+        color: #ffc107;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #ddd;
+    }
+
+    .btn-primary {
+        background: #ffc107;
+        color: #1a1a1a;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+        background: #e0a800;
+        transform: scale(1.05);
+    }
+
+    /* Mobile Responsive Logic */
+    @media (max-width: 768px) {
+        .hero-section { height: 60vh; }
+        .hero-content h1 { font-size: 2rem; }
+        .hero-content p { font-size: 1rem; }
+    }
+</style>
+
+<!-- property prt  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Property Gallery</title>
+    <style>
+        /* ===== General Styles ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f4f4; }
+
+        /* Section Heading */
+        .section-title { text-align: center; font-size: 3rem; color: #1a1a1a; margin: 50px 0 10px 0; }
+        .section-subtitle { text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 40px; }
+
+        /* ===== Grid Container (Desktop: 3 per row) ===== */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 50px 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+            gap: 30px; /* Space between cards */
+        }
+
+        /* ===== Property Card Styles ===== */
+        .property-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* Indicates clickable */
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Ensures images don't stretch */
+        }
+
+        .card-content { padding: 20px; }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #777;
+            line-height: 1.5;
+            /* Truncate text to 3 lines */
+            display: -webkit-box;
+            --webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* ===== Responsive Media Queries (The "Best" Shape) ===== */
+
+        /* Tablets (768px and below): 2 per row */
+        @media (max-width: 768px) {
+            .gallery-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .section-title { font-size: 2.5rem; }
+        }
+
+        /* Phones (480px and below): 1 per row */
+        @media (max-width: 480px) {
+            .gallery-container { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+            .property-card img { height: 250px; /* Bigger images on mobile */ }
+        }
+
+        /* ===== Modal / Popup Styles (Click to View) ===== */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000; /* On top of everything */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8); /* Dark overlay */
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show { display: flex; opacity: 1; }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 20px;
+            position: relative;
+            animation: slideIn 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto; /* Scroll if content is too long */
+        }
+
+        @keyframes slideIn { from { transform: translateY(-50px); } to { transform: translateY(0); } }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .close-modal:hover { color: red; }
+
+        .modal-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .modal-text { padding: 30px; }
+        .modal-text h1 { font-size: 2.5rem; color: #111; margin-bottom: 15px; }
+        .modal-text p { font-size: 1.1rem; color: #444; line-height: 1.8; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Heading Section -->
+    <div class="section-title">Featured Properties</div>
+    <div class="section-subtitle">Explore our best listings designed for modern living.</div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-container">
+
+        <!-- Property Card 1 -->
+        <div class="property-card" onclick="openModal('img/prt.jpeg', 'Luxury Modern Villa', 'Experience unparalleled luxury in this stunning modern villa located in the heart of the city. Featuring 5 bedrooms, a private pool, and smart home technology, this is urban living at its finest.')">
+            <img src="img/prt1.jpeg" alt="Luxury Villa">
+            <div class="card-content">
+                <h3>Luxury Modern Villa</h3>
+                <p>Experience unparalleled luxury in this stunning modern villa located in the heart of the city. Featuring 5 bedrooms, a private pool, and smart home technology, this is urban living at its finest.</p>
+            </div>
+        </div>
+
+
+        <!-- Property Card 2 -->
+        <div class="property-card" onclick="openModal('', 'City Center Penthouse', 'Live above it all in this spectacular city center penthouse. Floor-to-ceiling windows offer breathtaking skyline views. Walking distance to the best restaurants and entertainment.')">
+            <img src="img/prt2.jpeg" alt="Penthouse">
+            <div class="card-content">
+                <h3>City Center Penthouse</h3>
+                <p>Live above it all in this spectacular city center penthouse. Floor-to-ceiling windows offer breathtaking skyline views. Walking distance to the best restaurants and entertainment.</p>
+            </div>
+        </div>
+        
+        <!-- Property Card 3 -->
+        <div class="property-card" onclick="openModal('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80', 'Suburban Family Home', 'Perfect for a growing family, this spacious home is located in a quiet, friendly neighborhood near top-rated schools. Includes a large backyard and updated kitchen.')">
+            <img src="img/prt3.jpeg" alt="Family Home">
+            <div class="card-content">
+                <h3>Suburban Family Home</h3>
+                <p>Perfect for a growing family, this spacious home is located in a quiet, friendly neighborhood near top-rated schools. Includes a large backyard and updated kitchen.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- ===== Modal Popup HTML ===== -->
+    <div id="propertyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-img" src="" alt="Property Image">
+            <div class="modal-text">
+                <h1 id="modalTitle"></h1>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        const modal = document.getElementById("propertyModal");
+        const modalImg = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDesc = document.getElementById("modalDescription");
+
+        function openModal(imgSrc, title, description) {
+            modal.classList.add("show");
+            modalImg.src = imgSrc;
+            modalTitle.innerText = title;
+            modalDesc.innerText = description;
+            // Prevent scrolling body when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove("show");
+            // Restore scrolling
+            document.body.style.overflow = '';
+        }
+
+        // Close modal if clicking outside the content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal on pressing ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && modal.classList.contains('show')) {
+                closeModal();
+            }
+        });
+    </script>
+
+
+<!-- support spt  -->
+ <section class="features-section">
+    <div class="features-container">
+        <!-- Feature 1: Trusted -->
+        <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Trusted Partner</h3>
+            <p>10+ years of trust and reliability in the Bihar real estate market.</p>
+        </div>
+        <!-- Feature 2: Customer Care -->
+        <div class="feature-card">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Our dedicated team is always here to assist you with your queries.</p>
+        </div>
+        <!-- Feature 3: Top Investment -->
+        <div class="feature-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Top Investment</h3>
+            <p>We bring you the most profitable and high-value property options.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Container Layout */
+.features-section { padding: 80px 20px; background-color: #f9f9f9; }
+
+.features-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards on desktop */
+    gap: 30px;
+}
+
+/* Card Styling */
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.feature-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* Icon Styling */
+.feature-card i {
+    font-size: 40px;
+    color: #007bff;
+    background: #eef5ff;
+    padding: 25px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 { margin-bottom: 15px; color: #1a1a1a; }
+.feature-card p { color: #666; line-height: 1.6; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .features-container { grid-template-columns: repeat(2, 1fr); } /* 2 cards on tablets */
+}
+
+@media (max-width: 600px) {
+    .features-container { grid-template-columns: 1fr; } /* 1 card on mobiles */
+}
+</style>
+
+  <!-- footer  -->
+
+  
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-col">
+            <h3>Darbhanga<span> Property solution</span></h3>
+            <p>Darbhanga ka sabse trusted property platform. Hum aapko dilate hain best deals aur verified plots, taaki aapka investment rahe safe aur secure.</p>
+        </div>
+
+        <!-- Important Links -->
+        <div class="footer-col">
+            <h4>Important Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Darbhanga, Darbhanga, India</p>
+            <p><i class="fas fa-envelope"></i> info@Darbhangapropertysolution.com</p>
+            <p><i class="fas fa-phone"></i> +91-7970308680</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://www.instagram.com/darbhanga_.property_solution?igsh=eWJnMmp4d3h2b24="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/19F8WJefzi/"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Aamir. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- FontAwesome CDN for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* Footer Styling */
+    .footer { background: #1a1a1a; color: #fff; padding: 60px 5% 20px; }
+    
+    .footer-container { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 40px; 
+        margin-bottom: 40px;
+    }
+
+    .footer-col h3 { font-size: 24px; margin-bottom: 20px; }
+    .footer-col h3 span { color: #ffc107; }
+    .footer-col h4 { margin-bottom: 20px; border-bottom: 2px solid #ffc107; display: inline-block; }
+    .footer-col p { color: #ccc; line-height: 1.6; margin-bottom: 10px; }
+    
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: #ccc; text-decoration: none; transition: 0.3s; }
+    .footer-col ul li a:hover { color: #ffc107; padding-left: 5px; }
+
+    .social-links a { 
+        display: inline-block; background: #333; color: white; 
+        width: 40px; height: 40px; line-height: 40px; text-align: center; 
+        border-radius: 50%; margin-right: 10px; transition: 0.3s;
+    }
+    .social-links a:hover { background: #ffc107; color: #1a1a1a; }
+
+    .footer-bottom { 
+        text-align: center; padding-top: 20px; border-top: 1px solid #333; 
+        font-size: 14px; color: #777; 
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .footer { padding: 40px 5%; }
+        .footer-container { gap: 30px; text-align: center; }
+        .footer-col h4 { display: block; }
+    }
+</style>
+
+
+
+
+
+
+    <?php
+    // include "header/navbar.html";
+    // include "hero/prt.html";
+    // include "property/prtp.html";
+    // include "support/spt.html";
+    // include "header/footer.html";
+
+?>
+</body>
+</html>
